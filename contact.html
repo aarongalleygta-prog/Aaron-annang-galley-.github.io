@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>AgriLearn Network | Contact & Community</title>
+    <title>AgriLearn Network | Sustainable Farming in Ghana</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,192 +15,66 @@
         <div class="nav-toggle" onclick="toggleMenu()">☰ Menu</div>
         <nav>
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="crop-management.html">Crop Management</a></li>
                 <li><a href="market-prices.html">Market Prices</a></li>
                 <li><a href="resources.html">Farmer Resources</a></li>
-                <li><a href="contact.html" class="active">Contact/Community</a></li>
+                <li><a href="contact.html">Contact & Community</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="page-header">
-            <h2>Contact & Community</h2>
-            <p>Connect with experts and fellow farmers across Ghana</p>
-        </div>
-
-        <figure>
-            <img src="https://i.pinimg.com/736x/7c/9d/8e/7c9d8e6f5a4b3c2d1e9f8a7b6c5d4e3f.jpg" alt="Farmer community meeting" style="width:100%; border-radius:8px;" loading="lazy">
-            <figcaption>Farmer community meeting in the Upper East Region</figcaption>
-        </figure>
-
-        <div class="contact-grid">
-            <div class="contact-form">
-                <h3>Send Us a Message</h3>
-                <p>Questions about farming? Need extension advice? We're here to help!</p>
-                
-                <form id="contactForm" onsubmit="return validateContactForm(event)">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required placeholder="Kwame Asante">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="kwame@example.com">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+233 24 123 4567">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="farmer-type">I am a:</label>
-                        <select id="farmer-type" name="farmer-type">
-                            <option value="farmer">Smallholder Farmer</option>
-                            <option value="commercial">Commercial Farmer</option>
-                            <option value="buyer">Buyer/Trader</option>
-                            <option value="extension">Extension Agent</option>
-                            <option value="student">Student/Researcher</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="region">Region:</label>
-                        <select id="region" name="region">
-                            <option value="">Select your region</option>
-                            <option value="greater-accra">Greater Accra</option>
-                            <option value="ashanti">Ashanti</option>
-                            <option value="eastern">Eastern</option>
-                            <option value="western">Western</option>
-                            <option value="central">Central</option>
-                            <option value="volta">Volta</option>
-                            <option value="northern">Northern</option>
-                            <option value="upper-east">Upper East</option>
-                            <option value="upper-west">Upper West</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Ask about crop diseases, market prices, government programs..."></textarea>
-                    </div>
-                    
-                    <div id="form-feedback" class="form-feedback"></div>
-                    
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Sustainable Agriculture for Ghana's Future</h2>
+                <p>Empowering smallholder farmers with modern techniques and market linkages across all 16 regions</p>
+                <a href="resources.html" class="btn">Get Started Today</a>
             </div>
+        </section>
 
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                
-                <div class="info-item">
-                    <h4>📍 Main Office</h4>
-                    <p>Faculty of Computing and Information Systems<br>Tesano, Accra<br>Near Achimota School</p>
+        <section class="features">
+            <h2>Our Focus Areas</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Farmer inspecting maize crop" loading="lazy">
+                    <h3>Crop Management</h3>
+                    <p>Best practices for maize, cassava, and vegetable farming tailored for Ghanaian conditions</p>
+                    <a href="crop-management.html" class="btn">Learn More →</a>
                 </div>
-                
-                <div class="info-item">
-                    <h4>📞 Phone</h4>
-                    <p>+233 (0) 20 123 4567<br>+233 (0) 24 123 4567</p>
+                <div class="feature-card">
+                    <img src="https://images.pexels.com/photos/263771/pexels-photo-263771.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Farmers selling at market" loading="lazy">
+                    <h3>Market Prices</h3>
+                    <p>Real-time commodity prices across Accra, Kumasi, Tamale, and Techiman markets</p>
+                    <a href="market-prices.html" class="btn">View Prices →</a>
                 </div>
-                
-                <div class="info-item">
-                    <h4>✉️ Email</h4>
-                    <p>info@agrilearn.edu.gh<br>support@agrilearn.edu.gh</p>
-                </div>
-                
-                <div class="info-item">
-                    <h4>🕒 Office Hours</h4>
-                    <p>Mon-Fri: 8:00am - 5:00pm<br>Sat: 9:00am - 1:00pm</p>
-                </div>
-                
-                <div class="info-item social">
-                    <h4>📱 Follow Us</h4>
-                    <p>Facebook: @AgriLearnGhana<br>WhatsApp: +233 20 123 4567</p>
-                </div>
-            </div>
-        </div>
-
-        <section class="community-forum">
-            <h3>Farmer Community Forum</h3>
-            <p>Join discussions with 5,000+ Ghanaian farmers. Share experiences, ask questions, and learn together.</p>
-            
-            <div class="forum-actions">
-                <button onclick="showPostForm()" class="btn btn-secondary">+ New Post</button>
-            </div>
-            
-            <div id="new-post-form" class="new-post-form" style="display:none;">
-                <h4>Create New Post</h4>
-                <input type="text" id="new-post-title" placeholder="Post title">
-                <textarea id="new-post-content" placeholder="Your message..." rows="3"></textarea>
-                <input type="text" id="new-post-author" placeholder="Your name">
-                <div class="button-group">
-                    <button onclick="addNewPost()" class="btn">Publish Post</button>
-                    <button onclick="showPostForm()" class="btn btn-secondary">Cancel</button>
-                </div>
-            </div>
-            
-            <div class="forum-posts" id="forum-posts">
-                <div class="post">
-                    <div class="post-header">
-                        <span class="post-author">Kwame A. (Ashanti)</span>
-                        <span class="post-date">Feb 10, 2026</span>
-                    </div>
-                    <h4>Looking for improved cassava varieties</h4>
-                    <p>Has anyone tried the new Abrabopa cassava variety? How is the yield compared to Bankyehemaa? I have 2 acres in Ejura.</p>
-                    <div class="post-actions">
-                        <span>💬 7 replies</span>
-                        <a href="#">View discussion →</a>
-                    </div>
-                </div>
-                
-                <div class="post">
-                    <div class="post-header">
-                        <span class="post-author">Adwoa M. (Bono East)</span>
-                        <span class="post-date">Feb 8, 2026</span>
-                    </div>
-                    <h4>Tomato disease identification</h4>
-                    <p>My tomato plants are showing yellowing leaves and wilting. Any suggestions? Using Power variety.</p>
-                    <div class="post-actions">
-                        <span>💬 12 replies</span>
-                        <a href="#">View discussion →</a>
-                    </div>
-                </div>
-                
-                <div class="post">
-                    <div class="post-header">
-                        <span class="post-author">Yaw S. (Northern)</span>
-                        <span class="post-date">Feb 5, 2026</span>
-                    </div>
-                    <h4>Collective marketing for maize farmers</h4>
-                    <p>Organizing maize farmers in Savelugu to aggregate and market together. Interested farmers can join.</p>
-                    <div class="post-actions">
-                        <span>💬 18 replies</span>
-                        <a href="#">View discussion →</a>
-                    </div>
+                <div class="feature-card">
+                    <img src="https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Extension officer training farmers" loading="lazy">
+                    <h3>Farmer Resources</h3>
+                    <p>Government schemes, weather alerts, and training materials in Twi and English</p>
+                    <a href="resources.html" class="btn">Explore →</a>
                 </div>
             </div>
         </section>
 
-        <section class="expert-panel">
-            <h3>Ask the Expert</h3>
-            <div class="expert-profile">
-                <img src="https://i.pinimg.com/736x/9b/5a/7c/9b5a7c8d3e2f1b4a5c7e9d2f3b4a5c6d.jpg" alt="Agricultural expert">
-                <div>
-                    <h4>Dr. Kwame Asante</h4>
-                    <p>Senior Agricultural Extension Officer<br>PhD in Crop Science, University of Ghana</p>
-                </div>
-            </div>
-            <p>Submit your questions to our panel of agricultural extension specialists. Response within 48 hours.</p>
-            <form onsubmit="return submitExpertQuestion(event)">
-                <div class="expert-question">
-                    <input type="text" id="expert-question" placeholder="Type your question here...">
-                    <button type="submit" class="btn">Ask Now</button>
-                </div>
-            </form>
+        <section class="welcome">
+            <h2>Welcome to AgriLearn Network</h2>
+            
+            <figure>
+                <img src="https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ghanaian farmers harvesting maize" loading="lazy">
+                <figcaption>Smallholder farmers harvesting maize in the Bono East Region</figcaption>
+            </figure>
+            
+            <p>Agriculture is the backbone of Ghana's economy, employing over 45% of the workforce. At AgriLearn Network, we provide farmers with access to modern farming techniques, real-time market information, and a supportive community of fellow farmers and agricultural experts. Our mission is to enhance agricultural productivity and sustainability through knowledge sharing and technology adoption.</p>
+            
+            <h3>Why Choose AgriLearn?</h3>
+            <ul style="margin-left:20px;">
+                <li>✓ Research-based farming techniques from CSIR and MoFA</li>
+                <li>✓ Real-time market price updates from 12 major markets</li>
+                <li>✓ Weather alerts and advisory services</li>
+                <li>✓ Government scheme information (Planting for Food and Jobs)</li>
+                <li>✓ Community of practice with 5,000+ Ghanaian farmers</li>
+            </ul>
         </section>
     </main>
 
@@ -216,6 +90,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="crop-management.html">Crop Management</a></li>
                     <li><a href="market-prices.html">Market Prices</a></li>
+                    <li><a href="resources.html">Farmer Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -223,6 +99,7 @@
                 <ul>
                     <li>Ministry of Food & Agriculture</li>
                     <li>CSIR - Crops Research Institute</li>
+                    <li>Farmers' Organizations Network</li>
                 </ul>
             </div>
         </div>
