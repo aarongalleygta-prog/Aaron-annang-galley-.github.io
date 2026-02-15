@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriLearn Network | Sustainable Farming in Ghana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>AgriLearn Network | Home - Sustainable Farming in Ghana</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +12,10 @@
             <h1>🌱 AgriLearn Network</h1>
             <p>Empowering Ghanaian Farmers with Knowledge</p>
         </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰ Menu</div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="crop-management.html">Crop Management</a></li>
                 <li><a href="market-prices.html">Market Prices</a></li>
                 <li><a href="resources.html">Farmer Resources</a></li>
@@ -36,22 +37,22 @@
             <h2>Our Focus Areas</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <img src="https://i.pinimg.com/736x/6d/93/5e/6d935e7e5d1db43e0d6f6a8c9f0b3a2e.jpg" alt="Farmer inspecting maize crop in Ghana">
+                    <img src="https://i.pinimg.com/736x/6d/93/5e/6d935e7e5d1db43e0d6f6a8c9f0b3a2e.jpg" alt="Farmer inspecting maize crop in Ghana" loading="lazy">
                     <h3>Crop Management</h3>
                     <p>Best practices for maize, cassava, and vegetable farming tailored for Ghanaian conditions</p>
-                    <a href="crop-management.html">Learn More →</a>
+                    <a href="crop-management.html" class="btn">Learn More →</a>
                 </div>
                 <div class="feature-card">
-                    <img src="https://i.pinimg.com/736x/8e/4a/7b/8e4a7bc9d3f2b8c7a1e9d4f6a2b8c7d1.jpg" alt="Farmers selling at Techiman market">
+                    <img src="https://i.pinimg.com/736x/8e/4a/7b/8e4a7bc9d3f2b8c7a1e9d4f6a2b8c7d1.jpg" alt="Farmers selling at Techiman market" loading="lazy">
                     <h3>Market Prices</h3>
                     <p>Real-time commodity prices across Accra, Kumasi, Tamale, and Techiman markets</p>
-                    <a href="market-prices.html">View Prices →</a>
+                    <a href="market-prices.html" class="btn">View Prices →</a>
                 </div>
                 <div class="feature-card">
-                    <img src="https://i.pinimg.com/736x/3a/7c/9d/3a7c9d8e2f1b4a5c7e9d2f3b4a5c6d7e.jpg" alt="Extension officer training farmers">
+                    <img src="https://i.pinimg.com/736x/3a/7c/9d/3a7c9d8e2f1b4a5c7e9d2f3b4a5c6d7e.jpg" alt="Extension officer training farmers" loading="lazy">
                     <h3>Farmer Resources</h3>
                     <p>Government schemes, weather alerts, and training materials in Twi and English</p>
-                    <a href="resources.html">Explore →</a>
+                    <a href="resources.html" class="btn">Explore →</a>
                 </div>
             </div>
         </section>
@@ -60,14 +61,14 @@
             <h2>Welcome to AgriLearn Network</h2>
             
             <figure>
-                <img src="https://i.pinimg.com/736x/9b/5a/7c/9b5a7c8d3e2f1b4a5c7e9d2f3b4a5c6d.jpg" alt="Ghanaian farmers harvesting maize" style="width:100%; max-width:800px; border-radius:8px; margin:20px 0;">
-                <figcaption>Figure 1.2: Smallholder farmers harvesting maize in the Bono East Region</figcaption>
+                <img src="https://i.pinimg.com/736x/9b/5a/7c/9b5a7c8d3e2f1b4a5c7e9d2f3b4a5c6d.jpg" alt="Ghanaian farmers harvesting maize" loading="lazy">
+                <figcaption>Smallholder farmers harvesting maize in the Bono East Region</figcaption>
             </figure>
             
             <p>Agriculture is the backbone of Ghana's economy, employing over 45% of the workforce. At AgriLearn Network, we provide farmers with access to modern farming techniques, real-time market information, and a supportive community of fellow farmers and agricultural experts. Our mission is to enhance agricultural productivity and sustainability through knowledge sharing and technology adoption.</p>
             
             <h3>Why Choose AgriLearn?</h3>
-            <ul>
+            <ul style="margin-left:20px;">
                 <li>✓ Research-based farming techniques from CSIR and MoFA</li>
                 <li>✓ Real-time market price updates from 12 major markets</li>
                 <li>✓ Weather alerts and advisory services in local languages</li>
@@ -81,8 +82,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>AgriLearn Network</h4>
-                <p>Knowledge for Sustainable Agriculture</p>
-                <p style="margin-top:10px;">📍 Tesano, Accra<br>📞 +233 20 123 4567<br>✉️ info@agrilearn.edu.gh</p>
+                <p>📍 Tesano, Accra<br>📞 +233 20 123 4567<br>✉️ info@agrilearn.edu.gh</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -91,7 +91,7 @@
                     <li><a href="crop-management.html">Crop Management</a></li>
                     <li><a href="market-prices.html">Market Prices</a></li>
                     <li><a href="resources.html">Farmer Resources</a></li>
-                    <li><a href="contact.html">Contact/Community</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -100,14 +100,15 @@
                     <li>Ministry of Food & Agriculture</li>
                     <li>CSIR - Crops Research Institute</li>
                     <li>Farmers' Organizations Network</li>
-                    <li>University of Ghana</li>
                 </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 AgriLearn Network. All rights reserved. | IT245 Project | Tesano, Accra</p>
+            <p>&copy; 2026 AgriLearn Network | Student: AARON ANNANG GALLEY (2425402882)</p>
         </div>
     </footer>
+
+    <button id="scroll-top-btn" onclick="scrollToTop()">↑ Top</button>
 
     <script src="script.js"></script>
 </body>
