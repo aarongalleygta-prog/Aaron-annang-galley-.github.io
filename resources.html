@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmer Resources | AgriLearn Network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>AgriLearn Network | Farmer Resources</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,12 +12,13 @@
             <h1>🌱 AgriLearn Network</h1>
             <p>Empowering Ghanaian Farmers with Knowledge</p>
         </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰ Menu</div>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="crop-management.html">Crop Management</a></li>
                 <li><a href="market-prices.html">Market Prices</a></li>
-                <li><a href="resources.html">Farmer Resources</a></li>
+                <li><a href="resources.html" class="active">Farmer Resources</a></li>
                 <li><a href="contact.html">Contact/Community</a></li>
             </ul>
         </nav>
@@ -30,105 +31,73 @@
         </div>
 
         <figure>
-            <img src="https://i.pinimg.com/736x/9b/5a/7c/9b5a7c8d3e2f1b4a5c7e9d2f3b4a5c6d.jpg" alt="Extension officer advising farmers in Northern Region" style="width:100%; max-height:300px; object-fit:cover; border-radius:8px; margin:20px 0;">
-            <figcaption>Figure 4.1: Agricultural extension officer providing technical advice to farmers in the Northern Region</figcaption>
+            <img src="https://i.pinimg.com/736x/9b/5a/7c/9b5a7c8d3e2f1b4a5c7e9d2f3b4a5c6d.jpg" alt="Extension officer advising farmers" style="width:100%; border-radius:8px;" loading="lazy">
+            <figcaption>Extension officer providing technical advice in the Northern Region</figcaption>
         </figure>
 
         <div class="resources-grid">
-            <section class="resource-category">
+            <div class="resource-category">
                 <h3>📋 Government Schemes</h3>
                 <div class="resource-item">
                     <h4>🌽 Planting for Food and Jobs (PFJ)</h4>
-                    <p><strong>Eligibility:</strong> All smallholder farmers with valid registration</p>
                     <p><strong>Benefits:</strong> Subsidized fertilizers (50% off), certified seeds, free extension services</p>
-                    <p><strong>How to Apply:</strong> Register at your local Department of Agriculture office or district MoFA office</p>
+                    <p><strong>Apply:</strong> Local Department of Agriculture office</p>
                 </div>
                 <div class="resource-item">
                     <h4>💧 One Village One Dam (1V1D)</h4>
-                    <p><strong>Eligibility:</strong> Farming communities in the five northern regions</p>
-                    <p><strong>Benefits:</strong> Construction of small-scale irrigation dams for dry season farming</p>
+                    <p><strong>Benefits:</strong> Irrigation dams for dry season farming in northern regions</p>
                 </div>
                 <div class="resource-item">
                     <h4>🐄 Rearing for Food and Jobs (RFJ)</h4>
-                    <p><strong>Eligibility:</strong> Livestock farmers (cattle, poultry, small ruminants)</p>
                     <p><strong>Benefits:</strong> Vaccination programs, improved breeds, extension support</p>
                 </div>
-            </section>
+            </div>
 
-            <section class="resource-category">
+            <div class="resource-category">
                 <h3>🌤️ Weather Advisory</h3>
                 <div class="weather-widget">
                     <h4>7-Day Forecast - Northern Ghana</h4>
-                    <p><strong>Today:</strong> Sunny, high 34°C, low 24°C. No rain expected.</p>
-                    <p><strong>Tomorrow:</strong> Partly cloudy, 30% chance of afternoon showers in Upper East.</p>
-                    <p><strong>Next 3 days:</strong> Favorable for planting and spraying operations across most regions.</p>
-                    <p><strong>Weekly outlook:</strong> Moderate rainfall expected in major maize producing areas of Bono East and Ashanti. Prepare drainage systems.</p>
+                    <p><strong>Today:</strong> Sunny, high 34°C, low 24°C</p>
+                    <p><strong>Tomorrow:</strong> Partly cloudy, 30% chance of rain in Upper East</p>
+                    <p><strong>Next 3 days:</strong> Favorable for planting and spraying</p>
+                    <p><strong>Alert:</strong> Rainfall expected in Bono East and Ashanti</p>
                 </div>
                 <div class="alert" id="weather-alert">
                     <h4>⚠️ Seasonal Alert</h4>
-                    <p><strong>Major growing areas:</strong> Moderate rainfall (10-20mm) expected in Bono East, Ashanti, and Eastern Regions from February 18-20. Ideal for land preparation.</p>
-                    <p><strong>Coastal areas:</strong> Dry and dusty conditions continue. Protect seedlings with shade nets.</p>
+                    <p>Moderate rainfall (10-20mm) expected in Bono East, Ashanti, and Eastern Regions. Prepare drainage systems.</p>
                 </div>
-            </section>
+                <button onclick="toggleWeatherAlert()" class="btn btn-secondary" style="margin-top:10px; width:100%;">Toggle Alert</button>
+            </div>
 
-            <section class="resource-category">
+            <div class="resource-category">
                 <h3>📥 Downloadable Resources</h3>
-                <ul class="download-list" style="list-style:none;">
-                    <li style="margin:15px 0;"><a href="#" style="color:#2e7d32;">📄 Maize Production Guide (PDF, 2.5MB) - Twi version</a></li>
-                    <li style="margin:15px 0;"><a href="#" style="color:#2e7d32;">📊 Fertilizer Calculator (Excel) - English/Twi</a></li>
-                    <li style="margin:15px 0;"><a href="#" style="color:#2e7d32;">📘 Integrated Pest Management Handbook (PDF, 4MB)</a></li>
-                    <li style="margin:15px 0;"><a href="#" style="color:#2e7d32;">📝 Farm Record Keeping Template (Excel)</a></li>
-                    <li style="margin:15px 0;"><a href="#" style="color:#2e7d32;">🌱 Cassava Variety Guide (PDF, 1.8MB)</a></li>
-                    <li style="margin:15px 0;"><a href="#" style="color:#2e7d32;">📋 MoFA Extension Contact List (PDF)</a></li>
+                <ul class="download-list">
+                    <li>📄 Maize Production Guide (PDF) - English/Twi</li>
+                    <li>📊 Fertilizer Calculator (Excel)</li>
+                    <li>📘 Integrated Pest Management Handbook (PDF)</li>
+                    <li>📝 Farm Record Keeping Template (Excel)</li>
+                    <li>🌱 Cassava Variety Guide (PDF)</li>
+                    <li>📋 MoFA Extension Contact List (PDF)</li>
                 </ul>
-                <p style="margin-top:20px; font-style:italic;">All resources available in English and Twi. Hard copies available at district MoFA offices.</p>
-            </section>
+                <p style="margin-top:15px;"><em>Hard copies available at district MoFA offices</em></p>
+            </div>
         </div>
 
         <section class="training-events">
-            <h3>📅 Upcoming Training & Events</h3>
-            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:20px 0;">
-                <img src="https://i.pinimg.com/736x/6d/93/5e/6d935e7e5d1db43e0d6f6a8c9f0b3a2e.jpg" alt="Soil management workshop" style="width:100%; border-radius:4px;">
-                <img src="https://i.pinimg.com/736x/8e/4a/7b/8e4a7bc9d3f2b8c7a1e9d4f6a2b8c7d1.jpg" alt="Post-harvest handling training" style="width:100%; border-radius:4px;">
-                <img src="https://i.pinimg.com/736x/3a/7c/9d/3a7c9d8e2f1b4a5c7e9d2f3b4a5c6d7e.jpg" alt="Farmer field day" style="width:100%; border-radius:4px;">
-                <img src="https://i.pinimg.com/736x/5a/7c/9d/5a7c9d8e2f1b4a5c7e9d2f3b4a5c6d7e.jpg" alt="Women in agriculture training" style="width:100%; border-radius:4px;">
+            <h3>📅 Upcoming Training Events</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr><th>Date</th><th>Event</th><th>Location</th><th>Contact</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Feb 25-26</td><td>Soil Management Workshop</td><td>Kumasi</td><td>CSIR-CRI</td></tr>
+                        <tr><td>March 2</td><td>Post-Harvest Training</td><td>Techiman</td><td>MoFA</td></tr>
+                        <tr><td>March 9-10</td><td>Farmer Field Day</td><td>Ejura</td><td>CSIR-CRI</td></tr>
+                        <tr><td>March 15</td><td>Women in Agribusiness</td><td>Tamale</td><td>MoFA</td></tr>
+                    </tbody>
+                </table>
             </div>
-            <table class="events-table">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Event</th>
-                        <th>Location</th>
-                        <th>Contact</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Feb 25-26, 2026</td>
-                        <td>Sustainable Soil Management Workshop</td>
-                        <td>Fumesua, Kumasi</td>
-                        <td>CSIR-CRI: 0322 123456</td>
-                    </tr>
-                    <tr>
-                        <td>March 2, 2026</td>
-                        <td>Post-Harvest Loss Reduction Training</td>
-                        <td>Techiman Market</td>
-                        <td>MoFA Techiman: 0244 123456</td>
-                    </tr>
-                    <tr>
-                        <td>March 9-10, 2026</td>
-                        <td>Farmer Field Day - Improved Maize Varieties</td>
-                        <td>Ejura</td>
-                        <td>CSIR-CRI: 0322 123456</td>
-                    </tr>
-                    <tr>
-                        <td>March 15, 2026</td>
-                        <td>Women in Agribusiness Workshop</td>
-                        <td>Tamale</td>
-                        <td>MoFA Northern: 0372 123456</td>
-                    </tr>
-                </tbody>
-            </table>
         </section>
     </main>
 
@@ -136,7 +105,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>AgriLearn Network</h4>
-                <p>Knowledge for Sustainable Agriculture</p>
+                <p>📍 Tesano, Accra<br>📞 +233 20 123 4567<br>✉️ info@agrilearn.edu.gh</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -147,15 +116,19 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: info@agrilearn.edu.gh</p>
-                <p>Phone: +233 20 123 4567</p>
+                <h4>Partners</h4>
+                <ul>
+                    <li>Ministry of Food & Agriculture</li>
+                    <li>CSIR - Crops Research Institute</li>
+                </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 AgriLearn Network. All rights reserved.</p>
+            <p>&copy; 2026 AgriLearn Network | Student: AARON ANNANG GALLEY (2425402882)</p>
         </div>
     </footer>
+
+    <button id="scroll-top-btn" onclick="scrollToTop()">↑ Top</button>
 
     <script src="script.js"></script>
 </body>
