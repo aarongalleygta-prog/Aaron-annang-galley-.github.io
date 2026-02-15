@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Community | AgriLearn Network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>AgriLearn Network | Contact & Community</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,13 +12,14 @@
             <h1>🌱 AgriLearn Network</h1>
             <p>Empowering Ghanaian Farmers with Knowledge</p>
         </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰ Menu</div>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="crop-management.html">Crop Management</a></li>
                 <li><a href="market-prices.html">Market Prices</a></li>
                 <li><a href="resources.html">Farmer Resources</a></li>
-                <li><a href="contact.html">Contact/Community</a></li>
+                <li><a href="contact.html" class="active">Contact/Community</a></li>
             </ul>
         </nav>
     </header>
@@ -30,16 +31,16 @@
         </div>
 
         <figure>
-            <img src="https://i.pinimg.com/736x/7c/9d/8e/7c9d8e6f5a4b3c2d1e9f8a7b6c5d4e3f.jpg" alt="Farmers gathered for community meeting in Upper East Region" style="width:100%; max-height:300px; object-fit:cover; border-radius:8px; margin:20px 0;">
-            <figcaption>Figure 5.1: Farmer community meeting in the Upper East Region discussing collective marketing</figcaption>
+            <img src="https://i.pinimg.com/736x/7c/9d/8e/7c9d8e6f5a4b3c2d1e9f8a7b6c5d4e3f.jpg" alt="Farmer community meeting" style="width:100%; border-radius:8px;" loading="lazy">
+            <figcaption>Farmer community meeting in the Upper East Region</figcaption>
         </figure>
 
         <div class="contact-grid">
-            <section class="contact-form">
+            <div class="contact-form">
                 <h3>Send Us a Message</h3>
-                <p style="margin-bottom:20px;">Questions about farming? Need extension advice? We're here to help!</p>
+                <p>Questions about farming? Need extension advice? We're here to help!</p>
                 
-                <form id="contactForm">
+                <form id="contactForm" onsubmit="return validateContactForm(event)">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required placeholder="Kwame Asante">
@@ -63,7 +64,6 @@
                             <option value="buyer">Buyer/Trader</option>
                             <option value="extension">Extension Agent</option>
                             <option value="student">Student/Researcher</option>
-                            <option value="other">Other</option>
                         </select>
                     </div>
                     
@@ -77,138 +77,127 @@
                             <option value="western">Western</option>
                             <option value="central">Central</option>
                             <option value="volta">Volta</option>
-                            <option value="bono">Bono</option>
-                            <option value="bono-east">Bono East</option>
-                            <option value="ahafo">Ahafo</option>
                             <option value="northern">Northern</option>
-                            <option value="savannah">Savannah</option>
-                            <option value="north-east">North East</option>
                             <option value="upper-east">Upper East</option>
                             <option value="upper-west">Upper West</option>
-                            <option value="oti">Oti</option>
-                            <option value="western-north">Western North</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Ask about crop diseases, market prices, government programs..."></textarea>
+                        <textarea id="message" name="message" rows="4" required placeholder="Ask about crop diseases, market prices, government programs..."></textarea>
                     </div>
                     
-                    <div id="form-feedback" style="display:none; padding:10px; margin:10px 0; border-radius:4px;"></div>
+                    <div id="form-feedback" class="form-feedback"></div>
                     
                     <button type="submit" class="btn">Send Message</button>
                 </form>
-            </section>
+            </div>
 
-            <section class="contact-info">
+            <div class="contact-info">
                 <h3>Contact Information</h3>
                 
-                <div style="margin:20px 0;">
+                <div class="info-item">
                     <h4>📍 Main Office</h4>
                     <p>Faculty of Computing and Information Systems<br>Tesano, Accra<br>Near Achimota School</p>
                 </div>
                 
-                <div style="margin:20px 0;">
+                <div class="info-item">
                     <h4>📞 Phone</h4>
                     <p>+233 (0) 20 123 4567<br>+233 (0) 24 123 4567</p>
                 </div>
                 
-                <div style="margin:20px 0;">
+                <div class="info-item">
                     <h4>✉️ Email</h4>
                     <p>info@agrilearn.edu.gh<br>support@agrilearn.edu.gh</p>
                 </div>
                 
-                <div style="margin:20px 0;">
+                <div class="info-item">
                     <h4>🕒 Office Hours</h4>
-                    <p>Monday - Friday: 8:00am - 5:00pm<br>Saturday: 9:00am - 1:00pm<br>Closed Sundays and public holidays</p>
+                    <p>Mon-Fri: 8:00am - 5:00pm<br>Sat: 9:00am - 1:00pm</p>
                 </div>
                 
-                <div style="margin:20px 0; padding:15px; background:#e8f5e8; border-radius:8px;">
+                <div class="info-item social">
                     <h4>📱 Follow Us</h4>
-                    <p>Facebook: @AgriLearnGhana<br>WhatsApp: +233 20 123 4567<br>Twitter: @AgriLearn_GH</p>
+                    <p>Facebook: @AgriLearnGhana<br>WhatsApp: +233 20 123 4567</p>
                 </div>
-            </section>
+            </div>
         </div>
 
         <section class="community-forum">
             <h3>Farmer Community Forum</h3>
             <p>Join discussions with 5,000+ Ghanaian farmers. Share experiences, ask questions, and learn together.</p>
             
-            <div style="margin:20px 0; text-align:right;">
-                <button onclick="showPostForm()" class="btn btn-secondary" style="padding:8px 16px;">+ New Post</button>
+            <div class="forum-actions">
+                <button onclick="showPostForm()" class="btn btn-secondary">+ New Post</button>
             </div>
             
-            <div id="new-post-form" style="display:none; background:#f5f5f5; padding:20px; border-radius:8px; margin:20px 0;">
+            <div id="new-post-form" class="new-post-form" style="display:none;">
                 <h4>Create New Post</h4>
-                <div style="margin:10px 0;">
-                    <input type="text" id="new-post-title" placeholder="Post title" style="width:100%; padding:10px;">
+                <input type="text" id="new-post-title" placeholder="Post title">
+                <textarea id="new-post-content" placeholder="Your message..." rows="3"></textarea>
+                <input type="text" id="new-post-author" placeholder="Your name">
+                <div class="button-group">
+                    <button onclick="addNewPost()" class="btn">Publish Post</button>
+                    <button onclick="showPostForm()" class="btn btn-secondary">Cancel</button>
                 </div>
-                <div style="margin:10px 0;">
-                    <textarea id="new-post-content" placeholder="Your message..." rows="3" style="width:100%; padding:10px;"></textarea>
-                </div>
-                <div style="margin:10px 0;">
-                    <input type="text" id="new-post-author" placeholder="Your name" style="width:100%; padding:10px;">
-                </div>
-                <button onclick="addNewPost()" class="btn">Publish Post</button>
-                <button onclick="showPostForm()" style="margin-left:10px; padding:8px 16px;">Cancel</button>
             </div>
             
-            <div class="forum-posts">
-                <div class="post" style="background:#f9f9f9; padding:20px; border-radius:8px; margin-bottom:15px; border-left:4px solid #2e7d32;">
-                    <div class="post-header" style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                        <span class="post-author" style="font-weight:bold; color:#2e7d32;">Kwame A. (Ashanti Region)</span>
-                        <span class="post-date" style="color:#666;">Posted: Feb 10, 2026</span>
+            <div class="forum-posts" id="forum-posts">
+                <div class="post">
+                    <div class="post-header">
+                        <span class="post-author">Kwame A. (Ashanti)</span>
+                        <span class="post-date">Feb 10, 2026</span>
                     </div>
                     <h4>Looking for improved cassava varieties</h4>
-                    <p>Has anyone tried the new Abrabopa cassava variety? How is the yield compared to Bankyehemaa? Any advice on planting distance? I have 2 acres in Ejura.</p>
-                    <div class="post-actions" style="margin-top:10px; display:flex; justify-content:space-between;">
+                    <p>Has anyone tried the new Abrabopa cassava variety? How is the yield compared to Bankyehemaa? I have 2 acres in Ejura.</p>
+                    <div class="post-actions">
                         <span>💬 7 replies</span>
-                        <a href="#" style="color:#2e7d32;">View discussion →</a>
+                        <a href="#">View discussion →</a>
                     </div>
                 </div>
                 
-                <div class="post" style="background:#f9f9f9; padding:20px; border-radius:8px; margin-bottom:15px; border-left:4px solid #2e7d32;">
-                    <div class="post-header" style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                        <span class="post-author" style="font-weight:bold; color:#2e7d32;">Adwoa M. (Bono East)</span>
-                        <span class="post-date" style="color:#666;">Posted: Feb 8, 2026</span>
+                <div class="post">
+                    <div class="post-header">
+                        <span class="post-author">Adwoa M. (Bono East)</span>
+                        <span class="post-date">Feb 8, 2026</span>
                     </div>
                     <h4>Tomato disease identification</h4>
-                    <p>My tomato plants are showing yellowing leaves and wilting. I noticed some white spots on stems. Has anyone seen this before? Using Power variety in Techiman.</p>
-                    <div class="post-actions" style="margin-top:10px; display:flex; justify-content:space-between;">
+                    <p>My tomato plants are showing yellowing leaves and wilting. Any suggestions? Using Power variety.</p>
+                    <div class="post-actions">
                         <span>💬 12 replies</span>
-                        <a href="#" style="color:#2e7d32;">View discussion →</a>
+                        <a href="#">View discussion →</a>
                     </div>
                 </div>
                 
-                <div class="post" style="background:#f9f9f9; padding:20px; border-radius:8px; margin-bottom:15px; border-left:4px solid #2e7d32;">
-                    <div class="post-header" style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                        <span class="post-author" style="font-weight:bold; color:#2e7d32;">Yaw S. (Northern Region)</span>
-                        <span class="post-date" style="color:#666;">Posted: Feb 5, 2026</span>
+                <div class="post">
+                    <div class="post-header">
+                        <span class="post-author">Yaw S. (Northern)</span>
+                        <span class="post-date">Feb 5, 2026</span>
                     </div>
                     <h4>Collective marketing for maize farmers</h4>
-                    <p>We're organizing maize farmers in Savelugu to aggregate and market together. Already have 25 farmers with 500 bags. Interested farmers near Tamale can join our group. Better prices together!</p>
-                    <div class="post-actions" style="margin-top:10px; display:flex; justify-content:space-between;">
+                    <p>Organizing maize farmers in Savelugu to aggregate and market together. Interested farmers can join.</p>
+                    <div class="post-actions">
                         <span>💬 18 replies</span>
-                        <a href="#" style="color:#2e7d32;">View discussion →</a>
+                        <a href="#">View discussion →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="expert-panel" style="background:white; padding:30px; border-radius:8px; margin:30px 0;">
+        <section class="expert-panel">
             <h3>Ask the Expert</h3>
-            <div style="display:flex; align-items:center; gap:20px; margin:20px 0;">
-                <img src="https://i.pinimg.com/736x/9b/5a/7c/9b5a7c8d3e2f1b4a5c7e9d2f3b4a5c6d.jpg" alt="Agricultural expert" style="width:120px; height:120px; border-radius:50%; object-fit:cover;">
+            <div class="expert-profile">
+                <img src="https://i.pinimg.com/736x/9b/5a/7c/9b5a7c8d3e2f1b4a5c7e9d2f3b4a5c6d.jpg" alt="Agricultural expert">
                 <div>
                     <h4>Dr. Kwame Asante</h4>
-                    <p>Senior Agricultural Extension Officer<br>PhD in Crop Science, University of Ghana<br>22 years experience in Ghanaian agriculture</p>
+                    <p>Senior Agricultural Extension Officer<br>PhD in Crop Science, University of Ghana</p>
                 </div>
             </div>
-            <p>Submit your questions to our panel of agricultural extension specialists. Selected questions will be answered within 48 hours.</p>
-            <form onsubmit="submitExpertQuestion(event)" style="margin-top:20px;">
-                <div style="display:flex; gap:10px;">
-                    <input type="text" id="expert-question" placeholder="Type your question here..." style="flex:1; padding:12px; border:1px solid #ddd; border-radius:4px;">
+            <p>Submit your questions to our panel of agricultural extension specialists. Response within 48 hours.</p>
+            <form onsubmit="return submitExpertQuestion(event)">
+                <div class="expert-question">
+                    <input type="text" id="expert-question" placeholder="Type your question here...">
                     <button type="submit" class="btn">Ask Now</button>
                 </div>
             </form>
@@ -219,7 +208,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>AgriLearn Network</h4>
-                <p>Knowledge for Sustainable Agriculture</p>
+                <p>📍 Tesano, Accra<br>📞 +233 20 123 4567<br>✉️ info@agrilearn.edu.gh</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -230,15 +219,19 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: info@agrilearn.edu.gh</p>
-                <p>Phone: +233 20 123 4567</p>
+                <h4>Partners</h4>
+                <ul>
+                    <li>Ministry of Food & Agriculture</li>
+                    <li>CSIR - Crops Research Institute</li>
+                </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 AgriLearn Network. All rights reserved. | IT245 Project | Tesano, Accra</p>
+            <p>&copy; 2026 AgriLearn Network | Student: AARON ANNANG GALLEY (2425402882)</p>
         </div>
     </footer>
+
+    <button id="scroll-top-btn" onclick="scrollToTop()">↑ Top</button>
 
     <script src="script.js"></script>
 </body>
