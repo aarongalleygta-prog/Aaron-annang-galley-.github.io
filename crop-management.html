@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crop Management | AgriLearn Network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>AgriLearn Network | Crop Management</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,10 +12,11 @@
             <h1>🌱 AgriLearn Network</h1>
             <p>Empowering Ghanaian Farmers with Knowledge</p>
         </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰ Menu</div>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="crop-management.html">Crop Management</a></li>
+                <li><a href="crop-management.html" class="active">Crop Management</a></li>
                 <li><a href="market-prices.html">Market Prices</a></li>
                 <li><a href="resources.html">Farmer Resources</a></li>
                 <li><a href="contact.html">Contact/Community</a></li>
@@ -29,99 +30,69 @@
             <p>Sustainable practices for Ghana's major staple crops</p>
         </div>
 
-        <figure class="page-banner">
-            <img src="https://i.pinimg.com/736x/7c/9d/8e/7c9d8e6f5a4b3c2d1e9f8a7b6c5d4e3f.jpg" alt="Diverse crops growing on a Ghanaian farm" style="width:100%; max-height:300px; object-fit:cover; border-radius:8px; margin:20px 0;">
-            <figcaption>Figure 2.1: Mixed cropping system in Ghana's Forest Zone</figcaption>
+        <figure>
+            <img src="https://i.pinimg.com/736x/7c/9d/8e/7c9d8e6f5a4b3c2d1e9f8a7b6c5d4e3f.jpg" alt="Diverse crops growing on a Ghanaian farm" style="width:100%; border-radius:8px;" loading="lazy">
+            <figcaption>Mixed cropping system in Ghana's Forest Zone</figcaption>
         </figure>
 
         <div class="crop-grid">
-            <article class="crop-card">
+            <div class="crop-card">
                 <h3>🌽 Maize Cultivation</h3>
-                <figure>
-                    <img src="https://i.pinimg.com/736x/5a/7c/9d/5a7c9d8e2f1b4a5c7e9d2f3b4a5c6d7e.jpg" alt="Healthy maize field ready for harvest" class="crop-img">
-                    <figcaption>Figure 2.2: Mature maize field in the Transitional Zone</figcaption>
-                </figure>
+                <img src="https://i.pinimg.com/736x/5a/7c/9d/5a7c9d8e2f1b4a5c7e9d2f3b4a5c6d7e.jpg" alt="Healthy maize field" class="crop-img" loading="lazy">
                 
                 <h4>Best Planting Time</h4>
                 <p>Major season: March-April; Minor season: September-October</p>
                 
                 <h4>Recommended Varieties</h4>
-                <p>Obatanpa, Abontem, Mamaba, Omankwa (all drought-tolerant and high-yielding)</p>
-                
-                <figure>
-                    <img src="https://i.pinimg.com/736x/8e/4a/7b/8e4a7bc9d3f2b8c7a1e9d4f6a2b8c7d1.jpg" alt="Proper maize planting spacing demonstration" style="width:100%; border-radius:4px; margin:10px 0;">
-                    <figcaption>Figure 2.3: Correct spacing for maize planting (75cm x 40cm)</figcaption>
-                </figure>
+                <p>Obatanpa, Abontem, Mamaba, Omankwa (drought-tolerant, high-yielding)</p>
                 
                 <h4>Fertilizer Application</h4>
-                <p>Base: NPK 15-15-15 at 125kg/hectare at planting<br>Top dress: Sulfate of Ammonia or Urea at 150kg/hectare after 4 weeks</p>
+                <p>Base: NPK 15-15-15 at 125kg/hectare at planting<br>Top dress: Urea at 150kg/hectare after 4 weeks</p>
                 
                 <h4>Pest Management</h4>
-                <p>Monitor for fall armyworm. Use pheromone traps, neem-based pesticides, or recommended chemicals from MoFA extension agents.</p>
-            </article>
+                <p>Monitor for fall armyworm. Use pheromone traps or neem-based pesticides.</p>
+            </div>
 
-            <article class="crop-card">
+            <div class="crop-card">
                 <h3>🌿 Cassava Production</h3>
-                <figure>
-                    <img src="https://i.pinimg.com/736x/6d/93/5e/6d935e7e5d1db43e0d6f6a8c9f0b3a2e.jpg" alt="Cassava farm with mature tubers" class="crop-img">
-                    <figcaption>Figure 2.4: Improved cassava variety (Bankyehemaa) at 10 months</figcaption>
-                </figure>
+                <img src="https://i.pinimg.com/736x/6d/93/5e/6d935e7e5d1db43e0d6f6a8c9f0b3a2e.jpg" alt="Cassava farm" class="crop-img" loading="lazy">
                 
                 <h4>Improved Varieties</h4>
-                <p>Bankyehemaa, Afisiafi, Abrabopa, Essam Bankye (high-yielding, disease-resistant, CSSVD-tolerant)</p>
+                <p>Bankyehemaa, Afisiafi, Abrabopa, Essam Bankye (high-yielding, disease-resistant)</p>
                 
                 <h4>Planting Method</h4>
-                <p>Use healthy mature stems (25cm length, 6-8 nodes). Plant at 1m x 1m spacing on ridges or mounds. Plant at onset of major rains.</p>
-                
-                <figure>
-                    <img src="https://i.pinimg.com/736x/3a/7c/9d/3a7c9d8e2f1b4a5c7e9d2f3b4a5c6d7e.jpg" alt="Cassava stems prepared for planting" style="width:100%; border-radius:4px; margin:10px 0;">
-                    <figcaption>Figure 2.5: Cassava planting material selection and preparation</figcaption>
-                </figure>
+                <p>Use healthy mature stems (25cm length). Plant at 1m x 1m spacing. Plant at onset of major rains.</p>
                 
                 <h4>Weed Control</h4>
-                <p>Weed at 3 and 8 weeks after planting. Mulching with dried grass recommended for moisture retention.</p>
+                <p>Weed at 3 and 8 weeks after planting. Mulching recommended for moisture retention.</p>
                 
                 <h4>Harvesting</h4>
-                <p>12-18 months after planting depending on variety. Test by digging around base. For gari production, harvest at 12 months.</p>
-            </article>
+                <p>12-18 months after planting depending on variety.</p>
+            </div>
 
-            <article class="crop-card">
+            <div class="crop-card">
                 <h3>🍅 Vegetable Farming</h3>
-                <figure>
-                    <img src="https://i.pinimg.com/736x/9b/5a/7c/9b5a7c8d3e2f1b4a5c7e9d2f3b4a5c6d.jpg" alt="Fresh vegetables in a garden" class="crop-img">
-                    <figcaption>Figure 2.6: Mixed vegetable farming in the Volta Region</figcaption>
-                </figure>
+                <img src="https://i.pinimg.com/736x/9b/5a/7c/9b5a7c8d3e2f1b4a5c7e9d2f3b4a5c6d.jpg" alt="Vegetable garden" class="crop-img" loading="lazy">
                 
                 <h4>Tomato Production</h4>
-                <p>Nursery: Raise seedlings for 4 weeks in sterilized soil. Transplant at 60cm x 40cm spacing. Varieties: Power, Rasta, Petomech</p>
-                
-                <figure>
-                    <img src="https://i.pinimg.com/736x/7c/9d/8e/7c9d8e6f5a4b3c2d1e9f8a7b6c5d4e3f.jpg" alt="Tomato seedlings in nursery" style="width:100%; border-radius:4px; margin:10px 0;">
-                    <figcaption>Figure 2.7: Healthy tomato seedlings ready for transplanting</figcaption>
-                </figure>
+                <p>Nursery: Raise seedlings for 4 weeks. Transplant at 60cm x 40cm spacing. Varieties: Power, Rasta</p>
                 
                 <h4>Pepper Production</h4>
-                <p>Varieties: Legon 18, Kpakpo shito, Bird's eye. Nursery period: 5-6 weeks. Space at 50cm x 40cm.</p>
+                <p>Varieties: Legon 18, Kpakpo shito. Nursery period: 5-6 weeks. Space at 50cm x 40cm.</p>
                 
                 <h4>Irrigation</h4>
-                <p>Drip irrigation recommended for dry season farming. Water requirement: 25-30mm per week. Mulching reduces water loss by 40%.</p>
-                
-                <figure>
-                    <img src="https://i.pinimg.com/736x/5a/7c/9d/5a7c9d8e2f1b4a5c7e9d2f3b4a5c6d7e.jpg" alt="Drip irrigation system on vegetable farm" style="width:100%; border-radius:4px; margin:10px 0;">
-                    <figcaption>Figure 2.8: Drip irrigation installation for water conservation</figcaption>
-                </figure>
+                <p>Drip irrigation recommended. Water requirement: 25-30mm per week. Mulching reduces water loss.</p>
                 
                 <h4>Integrated Pest Management</h4>
-                <p>Use yellow sticky traps for whiteflies. Practice crop rotation with legumes. Neem extract effective against aphids.</p>
-            </article>
+                <p>Use yellow sticky traps for whiteflies. Practice crop rotation.</p>
+            </div>
         </div>
 
         <section class="multimedia-content">
-            <h3>Training Video: Sustainable Farming Practices in Ghana</h3>
+            <h3>Training Video: Sustainable Farming</h3>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sustainable Farming in Ghana" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Farming Video" frameborder="0" allowfullscreen></iframe>
             </div>
-            <p class="video-caption">Figure 2.9: Training video on sustainable crop management practices from MoFA extension services</p>
         </section>
     </main>
 
@@ -129,7 +100,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>AgriLearn Network</h4>
-                <p>Knowledge for Sustainable Agriculture</p>
+                <p>📍 Tesano, Accra<br>📞 +233 20 123 4567<br>✉️ info@agrilearn.edu.gh</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -140,15 +111,19 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: info@agrilearn.edu.gh</p>
-                <p>Phone: +233 20 123 4567</p>
+                <h4>Partners</h4>
+                <ul>
+                    <li>Ministry of Food & Agriculture</li>
+                    <li>CSIR - Crops Research Institute</li>
+                </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 AgriLearn Network. All rights reserved.</p>
+            <p>&copy; 2026 AgriLearn Network | Student: AARON ANNANG GALLEY (2425402882)</p>
         </div>
     </footer>
+
+    <button id="scroll-top-btn" onclick="scrollToTop()">↑ Top</button>
 
     <script src="script.js"></script>
 </body>
