@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Prices | AgriLearn Network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>AgriLearn Network | Market Prices</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,11 +12,12 @@
             <h1>🌱 AgriLearn Network</h1>
             <p>Empowering Ghanaian Farmers with Knowledge</p>
         </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰ Menu</div>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="crop-management.html">Crop Management</a></li>
-                <li><a href="market-prices.html">Market Prices</a></li>
+                <li><a href="market-prices.html" class="active">Market Prices</a></li>
                 <li><a href="resources.html">Farmer Resources</a></li>
                 <li><a href="contact.html">Contact/Community</a></li>
             </ul>
@@ -26,124 +27,68 @@
     <main>
         <div class="page-header">
             <h2>Market Prices</h2>
-            <p>Real-time commodity prices across major Ghanaian markets (Week of February 15, 2026)</p>
+            <p>Real-time commodity prices across major Ghanaian markets (February 2026)</p>
         </div>
 
         <figure>
-            <img src="https://i.pinimg.com/736x/8e/4a/7b/8e4a7bc9d3f2b8c7a1e9d4f6a2b8c7d1.jpg" alt="Busy agricultural market in Ghana" style="width:100%; max-height:300px; object-fit:cover; border-radius:8px; margin:20px 0;">
-            <figcaption>Figure 3.1: Farmers selling produce at the Techiman Central Market, Bono East Region</figcaption>
+            <img src="https://i.pinimg.com/736x/8e/4a/7b/8e4a7bc9d3f2b8c7a1e9d4f6a2b8c7d1.jpg" alt="Busy agricultural market in Ghana" style="width:100%; border-radius:8px;" loading="lazy">
+            <figcaption>Farmers selling produce at the Techiman Central Market</figcaption>
         </figure>
 
-        <table class="price-table">
-            <caption>Table 1.1: Current Commodity Prices (GHS per unit) - Week 7, 2026</caption>
-            <thead>
-                <tr>
-                    <th>Commodity</th>
-                    <th>Unit</th>
-                    <th>Accra</th>
-                    <th>Kumasi</th>
-                    <th>Tamale</th>
-                    <th>Techiman</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Maize (white)</strong></td>
-                    <td>100kg bag</td>
-                    <td>285</td>
-                    <td>270</td>
-                    <td>245</td>
-                    <td>255</td>
-                </tr>
-                <tr>
-                    <td><strong>Cassava</strong></td>
-                    <td>Bundle (50kg)</td>
-                    <td>155</td>
-                    <td>145</td>
-                    <td>135</td>
-                    <td>140</td>
-                </tr>
-                <tr>
-                    <td><strong>Yam (Puna)</strong></td>
-                    <td>Tuber (large)</td>
-                    <td>40</td>
-                    <td>35</td>
-                    <td>30</td>
-                    <td>32</td>
-                </tr>
-                <tr>
-                    <td><strong>Tomatoes</strong></td>
-                    <td>Box (25kg)</td>
-                    <td>210</td>
-                    <td>190</td>
-                    <td>165</td>
-                    <td>175</td>
-                </tr>
-                <tr>
-                    <td><strong>Pepper (fresh)</strong></td>
-                    <td>Bag (25kg)</td>
-                    <td>460</td>
-                    <td>430</td>
-                    <td>390</td>
-                    <td>410</td>
-                </tr>
-                <tr>
-                    <td><strong>Rice (local)</strong></td>
-                    <td>50kg bag</td>
-                    <td>330</td>
-                    <td>315</td>
-                    <td>295</td>
-                    <td>305</td>
-                </tr>
-                <tr>
-                    <td><strong>Groundnuts</strong></td>
-                    <td>100kg bag</td>
-                    <td>560</td>
-                    <td>540</td>
-                    <td>510</td>
-                    <td>530</td>
-                </tr>
-                <tr>
-                    <td><strong>Soybeans</strong></td>
-                    <td>100kg bag</td>
-                    <td>420</td>
-                    <td>400</td>
-                    <td>380</td>
-                    <td>390</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-container">
+            <table>
+                <caption>Current Commodity Prices (GHS per unit)</caption>
+                <thead>
+                    <tr>
+                        <th>Commodity</th>
+                        <th>Unit</th>
+                        <th>Accra</th>
+                        <th>Kumasi</th>
+                        <th>Tamale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Maize</td><td>100kg</td><td>285</td><td>270</td><td>245</td></tr>
+                    <tr><td>Cassava</td><td>50kg</td><td>155</td><td>145</td><td>135</td></tr>
+                    <tr><td>Yam</td><td>Tuber</td><td>40</td><td>35</td><td>30</td></tr>
+                    <tr><td>Tomatoes</td><td>Box</td><td>210</td><td>190</td><td>165</td></tr>
+                    <tr><td>Pepper</td><td>Bag</td><td>460</td><td>430</td><td>390</td></tr>
+                    <tr><td>Rice (local)</td><td>50kg</td><td>330</td><td>315</td><td>295</td></tr>
+                    <tr><td>Groundnuts</td><td>100kg</td><td>560</td><td>540</td><td>510</td></tr>
+                </tbody>
+            </table>
+        </div>
 
         <section class="price-analysis">
-            <h3>Price Trends and Analysis</h3>
-            
-            <figure>
-                <img src="https://i.pinimg.com/736x/3a/7c/9d/3a7c9d8e2f1b4a5c7e9d2f3b4a5c6d7e.jpg" alt="Line chart showing maize price trends over 6 months" style="max-width:100%; border:1px solid #ddd; padding:10px; background:white;">
-                <figcaption>Figure 3.2: Maize price trends across major markets (August 2025 - February 2026)</figcaption>
-            </figure>
-            
-            <p>As shown in Figure 3.2, maize prices have shown typical seasonal variation, with lowest prices during harvest (August-September) and gradual increases during the lean season. Farmers are advised to consider storage and marketing strategies to maximize returns. The current prices represent a 15% increase from harvest-time lows.</p>
-            
-            <figure>
-                <img src="https://i.pinimg.com/736x/5a/7c/9d/5a7c9d8e2f1b4a5c7e9d2f3b4a5c6d7e.jpg" alt="Bar chart comparing prices across regions" style="max-width:100%; margin:20px 0;">
-                <figcaption>Figure 3.3: Regional price comparison for major commodities - February 2026</figcaption>
-            </figure>
-            
-            <h4>Market Intelligence Tips</h4>
-            <ul>
-                <li>Prices are typically 15-20% higher in urban markets (Accra, Kumasi) compared to production areas</li>
-                <li>Wednesday and Saturday markets generally have better price discovery</li>
-                <li>Consider collective marketing through farmer groups for better bargaining power</li>
-                <li>Quality sorting and grading can increase prices by 10-30%</li>
-                <li>Transportation costs average GHS 15-20 per bag from farm to regional market</li>
+            <h3>Price Calculator</h3>
+            <div class="price-calculator">
+                <div class="form-group">
+                    <label>Quantity (bags):</label>
+                    <input type="number" id="calc-quantity" min="1" value="10">
+                </div>
+                <div class="form-group">
+                    <label>Price per bag (GHS):</label>
+                    <input type="number" id="calc-price" min="1" value="250">
+                </div>
+                <button onclick="calculatePrice()" class="btn">Calculate Total</button>
+                <p id="calc-result" style="margin-top:15px; font-weight:bold;"></p>
+            </div>
+
+            <h4>Market Tips</h4>
+            <ul style="margin-left:20px;">
+                <li>Prices are 15-20% higher in urban markets (Accra, Kumasi)</li>
+                <li>Wednesday and Saturday markets have better prices</li>
+                <li>Group selling through cooperatives gives better bargaining power</li>
+                <li>Grading and sorting can increase prices by 10-30%</li>
+                <li>Transportation costs: GHS 15-20 per bag from farm to market</li>
             </ul>
             
-            <p><strong>Data Source:</strong> Ministry of Food and Agriculture (MoFA) Market Information System, updated weekly.</p>
+            <p><strong>Data Source:</strong> Ministry of Food and Agriculture (MoFA)</p>
         </section>
 
         <section class="buyer-links">
             <h3>Connect with Buyers</h3>
-            <p>The platform facilitates direct connections between farmers and verified buyers, reducing post-harvest losses and improving market access. Join our community of 500+ registered buyers including aggregators, processors, and exporters.</p>
+            <p>Join our community of 500+ registered buyers including aggregators, processors, and exporters.</p>
             <div class="button-group">
                 <a href="contact.html" class="btn">Register as Seller</a>
                 <a href="contact.html" class="btn btn-secondary">Find Buyers</a>
@@ -155,7 +100,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>AgriLearn Network</h4>
-                <p>Knowledge for Sustainable Agriculture</p>
+                <p>📍 Tesano, Accra<br>📞 +233 20 123 4567<br>✉️ info@agrilearn.edu.gh</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -166,15 +111,19 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: info@agrilearn.edu.gh</p>
-                <p>Phone: +233 20 123 4567</p>
+                <h4>Partners</h4>
+                <ul>
+                    <li>Ministry of Food & Agriculture</li>
+                    <li>CSIR - Crops Research Institute</li>
+                </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 AgriLearn Network. All rights reserved.</p>
+            <p>&copy; 2026 AgriLearn Network | Student: AARON ANNANG GALLEY (2425402882)</p>
         </div>
     </footer>
+
+    <button id="scroll-top-btn" onclick="scrollToTop()">↑ Top</button>
 
     <script src="script.js"></script>
 </body>
