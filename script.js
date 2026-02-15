@@ -1,7 +1,8 @@
 // ========================================
 // AgriLearn Network - Complete JavaScript
 // MOBILE-FRIENDLY FUNCTIONS
-// IT245 Project - AARON ANNANG GALLEY (2425402882)
+// Agriculture Website - IT245 Project
+// Student: AARON ANNANG GALLEY (2425402882)
 // ========================================
 
 // ========================================
@@ -57,6 +58,17 @@ function validateContactForm(event) {
         feedback.style.color = 'red';
         feedback.innerHTML = 'Please enter a valid email address.';
         return false;
+    }
+    
+    // Validate phone (optional but must be valid if entered)
+    if (phone !== '') {
+        let phonePattern = /^[0-9+\-\s]+$/;
+        if (!phonePattern.test(phone)) {
+            feedback.style.display = 'block';
+            feedback.style.color = 'red';
+            feedback.innerHTML = 'Please enter a valid phone number.';
+            return false;
+        }
     }
     
     // Validate message
@@ -155,10 +167,6 @@ function addNewPost() {
         </div>
         <h4>${escapeHtml(title)}</h4>
         <p>${escapeHtml(content)}</p>
-        <div class="post-actions">
-            <span>💬 0 replies</span>
-            <a href="#">Be the first to reply →</a>
-        </div>
     `;
     
     forumPosts.insertBefore(newPost, forumPosts.firstChild);
@@ -222,13 +230,6 @@ window.addEventListener('scroll', function() {
 });
 
 // ========================================
-// PRINT PAGE
-// ========================================
-function printPage() {
-    window.print();
-}
-
-// ========================================
 // COPYRIGHT YEAR UPDATE
 // ========================================
 function updateCopyrightYear() {
@@ -266,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set active page in navigation
     setActivePage();
     
-    // Check if price calculator exists and initialize if needed
+    // Check if price calculator exists
     if (document.getElementById('calc-result')) {
         // Calculator exists, no action needed
     }
